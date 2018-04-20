@@ -22,9 +22,16 @@ Anaconda 发行版自带Pillow。否则，需要通过命令行安装：
 pip install pillow
 ```
 
+### 基于我这几天刚开发的安卓自动化测试框架——Cerium，修改了部分代码
+
+需要通过命令行安装：
+```
+pip install cerium
+```
+
 ### Charles
 
-Charles是一个HTTP代理服务器，当客户端连接Charles的代理访问互联网时，Charles可以监控其发送和接收的所有数据。这里我用来抓取“理想之光”APP从服务器接收到的数据包。
+Charles是一个HTTP代理服务器，当客户端连接Charles的代理访问互联网时，Charles可以监控其发送和接收的所有数据。这里我用来抓取“理想之光”APP从服务器接收到的数据包，将其保存为json文件。
 
 
 ## 实现过程

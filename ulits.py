@@ -26,7 +26,7 @@ def fetch_que_ans(file='find-exam.json'):
             yield option
 
 
-def preprocess(png='screenshot.png'):
+def preprocess(png='screencap.png'):
     img = Image.open(png)
     img_ex = copy.deepcopy(img)
     img_copy = ImageDraw.Draw(img_ex)
@@ -48,7 +48,7 @@ def preprocess(png='screenshot.png'):
                 positions.append(top)
                 top += 10
         top += 1
-    img_ex.save('screenshot_dev.png')
+    img_ex.save('screencap_dev.png')
     x1, x2, x3, x4, x5 = positions[:5]
     return (x1+x2)/2, (x2+x3)/2, (x3+x4)/2, (x4+x5)/2
 

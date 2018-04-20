@@ -1,6 +1,5 @@
 import copy
 import json
-import os
 
 from PIL import Image, ImageDraw
 
@@ -14,16 +13,16 @@ def fetch_que_ans(file='find-exam.json'):
                              que_ans['jsonData']['single']['options']).__next__()
             answer = options['optionsContent']
             option = options['sortIndex']
-            print(question, answer, option, file=open(
-                'que_ans.md', 'w', encoding='utf-8'), sep='\n', end='\n\n')
+            # print(question, answer, option, file=open(
+            #     'que_ans.md', 'w', encoding='utf-8'), sep='\n', end='\n\n')
             yield (option, )
         if que_ans['jsonData'].get('multiple'):
             options = tuple(filter(
                 lambda x: x['rightAnswers'] == True, que_ans['jsonData']['multiple']['options']))
             answer = ' | '.join(map(lambda x: x['optionsContent'], options))
             option = tuple(map(lambda x: x['sortIndex'], options))
-            print(question, answer, option, file=open(
-                'que_ans.md', 'w', encoding='utf-8'), sep='\n', end='\n\n')
+            # print(question, answer, option, file=open(
+            #     'que_ans.md', 'w', encoding='utf-8'), sep='\n', end='\n\n')
             yield option
 
 
@@ -54,19 +53,5 @@ def preprocess(png='screenshot.png'):
     return (x1+x2)/2, (x2+x3)/2, (x3+x4)/2, (x4+x5)/2
 
 
-def tap_option(y):
-    os.popen('adb shell input tap 140 {}'.format(y))
-
-
-def tap_next():
-    os.popen('adb shell input tap 888 1800')
-
-
-def screenshot():
-    os.system('adb shell screencap -p /sdcard/screenshot.png')
-    os.system('adb pull /sdcard/screenshot.png ./screenshot.png')
-
-
 if __name__ == '__main__':
-    # fetch_que_ans()
     preprocess()

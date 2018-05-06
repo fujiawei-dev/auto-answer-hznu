@@ -1,4 +1,7 @@
-# [Github实践——“理想之光“APP答题辅助](https://github.com/fjwCode/answer_helper) [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+# [Github实践——“理想之光“APP自动答题辅助](https://github.com/fjwCode/auto-answer-hznu/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+![Platform](https://img.shields.io/badge/Platform-Windows-4BC51D.svg)(https://pypi.org/project/auto-answer-hznu/)
+
 
 > 今天（2018.04.14）看到班级群发了《关于组织阿里巴巴商学院学生参加浙江省“卡尔马克思杯”浙江省大学生理论知识竞赛（初赛）的通知》，附带题库，于是心里。。。没错，写这个项目就仅是为了娱乐，顺便完成作业。上午误入歧途，浪费时间在解析题库和写入数据库中了，最后发现，题目和正确答案在答题一开始就已经全部储存于本地了，不算意外，这就非常简单了。后来为了实现全程自动化，用了PIL图像处理，精确定位选项位置，折腾一天，挺开心的。顺道实践了一下Github，啊啊啊，相当不太顺手。
 
@@ -22,7 +25,7 @@ Anaconda 发行版自带Pillow。否则，需要通过命令行安装：
 pip install pillow
 ```
 
-### 基于我这几天刚开发的安卓自动化测试框架——Cerium，修改了部分代码
+### 我开发的安卓自动化测试框架——Cerium
 
 需要通过命令行安装：
 ```
@@ -43,8 +46,13 @@ Charles是一个HTTP代理服务器，当客户端连接Charles的代理访问�
 * 完成那一刻，超开心！！！
 
 
-## 关于作者
+# 自动答题结果截图
 
-[![fjwCode](https://avatars2.githubusercontent.com/u/29617572?s=40&v=4)](https://github.com/fjwCode)
+![训练](https://github.com/fjwCode/auto-answer-hznu/001.png)
 
-初学自动化测试、自动化运维；初涉基金股票，正在备考今年5月份的证券资格从业证书考试。
+![正式](https://github.com/fjwCode/auto-answer-hznu/002.png)
+
+
+# 关于作者
+
+![微信公众号](https://github.com/fjwCode/auto-answer-hznu/wx.png)

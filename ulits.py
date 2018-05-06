@@ -1,9 +1,12 @@
+"""The utils methods."""
+
 import copy
 import json
 
 from PIL import Image, ImageDraw
 
 
+# Parsing JSON File
 def fetch_que_ans(file='find-exam.json'):
     content = json.load(open(file, encoding='utf-8'))
     for que_ans in content['body']['examItems']:
@@ -13,19 +16,16 @@ def fetch_que_ans(file='find-exam.json'):
                              que_ans['jsonData']['single']['options']).__next__()
             answer = options['optionsContent']
             option = options['sortIndex']
-            # print(question, answer, option, file=open(
-            #     'que_ans.md', 'w', encoding='utf-8'), sep='\n', end='\n\n')
             yield (option, )
         if que_ans['jsonData'].get('multiple'):
             options = tuple(filter(
                 lambda x: x['rightAnswers'] == True, que_ans['jsonData']['multiple']['options']))
             answer = ' | '.join(map(lambda x: x['optionsContent'], options))
             option = tuple(map(lambda x: x['sortIndex'], options))
-            # print(question, answer, option, file=open(
-            #     'que_ans.md', 'w', encoding='utf-8'), sep='\n', end='\n\n')
             yield option
 
 
+# Picture Preprocessing
 def preprocess(png='screencap.png'):
     img = Image.open(png)
     img_ex = copy.deepcopy(img)

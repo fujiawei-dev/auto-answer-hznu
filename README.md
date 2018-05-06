@@ -48,11 +48,14 @@ Charles是一个HTTP代理服务器，当客户端连接Charles的代理访问�
 
 # 自动答题结果截图
 
+## 训练
 ![训练](https://raw.githubusercontent.com/fjwCode/auto-answer-hznu/master/001.png)
 
+## 正式
 ![正式](https://raw.githubusercontent.com/fjwCode/auto-answer-hznu/master/002.png)
 
 
 # 关于作者
 
-![微信公众号](https://raw.githubusercontent.com/fjwCode/auto-answer-hznu/master/wx.png)
+## 微信公众号
+![微信公众号](https://raw.githubusercontent.com/fjwCode/auto-answer-hznu/master/wx.jpg)
